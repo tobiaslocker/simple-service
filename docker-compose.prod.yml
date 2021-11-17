@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    build: ./services/web
+    build: ./service/api
     command: gunicorn --bind 0.0.0.0:5000 main:app
     ports:
       - 5000:5000

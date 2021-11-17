@@ -12,6 +12,10 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN pip install -r requirements.txt
+RUN apt -y update
+RUN apt -y install git
+
+# install private dependencies
 
 # copy project
 COPY . /usr/src/app/
